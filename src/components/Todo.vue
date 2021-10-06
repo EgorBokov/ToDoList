@@ -1,17 +1,15 @@
 <template>
 <div class="main">
   <li class="hello">
-  <div class="task_text">
-
-   <p :class="{'isDone': todo.isDone}">{{todo.title}}</p>
-
-   </div>
-   <div class="task_buttons">
-   <button class="done_btn" @click="$emit('changeStatus', todo.id)">✔</button>
-   <button @click="$emit('deleteTask', todo.id)">✖</button>
-   </div>
+    <div class="task_text">
+      <p :class="{'isDone': todo.isDone}">{{todo.title}}</p>
+    </div>
+    <div class="task_buttons">
+        <button class="done_btn" @click="$emit('changeStatus', todo.id)">✔</button>
+        <button @click="$emit('deleteTask', todo.id)">✖</button>
+    </div>
   </li>
-  </div>
+</div>
 </template>
 
 
@@ -50,45 +48,45 @@ p {
   padding-left: 15px;
 }
 
-  button {
-    border: none;
-    background-color: 	#A52A2A;
-    border-radius:2px;
-    color: white;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
-    text-align:center;
-    padding:2px 5px;
-      box-sizing: border-box;
-      width: 25px;
-      height: 25px;
-  }
+button {
+  border: none;
+  background-color: 	#A52A2A;
+  border-radius:2px;
+  color: white;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  text-align:center;
+  padding:2px 5px;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+}
 
-  .done_btn {
-    background-color: #008000;
-    margin-right: 2px;
-  }
+.done_btn {
+  background-color: #008000;
+  margin-right: 2px;
+}
 
-  .done_btn:hover {
-      border: 2px solid #008000;
-      color: #008000;
-  }
+.done_btn:hover {
+  border: 2px solid #008000;
+  color: #008000;
+}
 
-  button:hover {
-    background-color: transparent;
-    border: 2px solid 	#A52A2A;
-    color: 	#A52A2A;
-  }
+button:hover {
+  background-color: transparent;
+  border: 2px solid 	#A52A2A;
+  color: 	#A52A2A;
+}
 
 
-  .main:hover{
-    box-shadow:4px 4px 10px rgba(255,255,255,0.56);
-  }
+.main:hover{
+  box-shadow:4px 4px 10px rgba(255,255,255,0.56);
+}
 
-  input {
-    height: 25px;
-    width: 25px;
-  }
+input {
+  height: 25px;
+  width: 25px;
+}
 
 li {
   display: flex;
@@ -97,9 +95,9 @@ li {
   padding-inline-start: 0;
 }
 
- ul {
+ul {
    padding-inline-start: 0;
- }
+}
 
 .task_buttons{
   

@@ -41,10 +41,8 @@ export default {
           localStorage.clear();
         },
         saveList(){
-          let todoList = JSON.stringify(this.todos);
+            let todoList = JSON.stringify(this.todos);
             localStorage.setItem("todoList", todoList);
-
-
             console.log(JSON.parse(localStorage.getItem("todoList")));
         },
         addTask(inputValue){
@@ -57,32 +55,36 @@ export default {
               this.inputValue = '';
           }
         },
-     deleteTask(id) {
+       deleteTask(id) {
           for (let i = 0; i < this.todos.length; i++) {
             if (this.todos[i].id === id) {
               this.todos.splice(i, 1);
             }
           }
         }
-    },
-  data() {
-    return {
-      todos: [
-      
-      ]
-    }
-  },
-  mounted(){
-if ( localStorage.getItem("todoList") != null ) {
-          let jsonTodos = JSON.parse(localStorage.getItem("todoList"));
-        for ( let i = 0; i < jsonTodos.length; i++ ) {
-          this.todos.push(jsonTodos[i]);}        
-  }
-  }
-}
+      },
+      data() {
+        return {
+          todos: [
+          
+          ]
+        }
+      },
+      mounted(){
+          if ( localStorage.getItem("todoList") != null ) {
+                    let jsonTodos = JSON.parse(localStorage.getItem("todoList"));
+                  for ( let i = 0; i < jsonTodos.length; i++ ) {
+                    this.todos.push(jsonTodos[i]);}        
+            }
+        }
+      }
 </script>
 
 <style>
+*{
+font-family: 'Arial';
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -119,21 +121,12 @@ li {
   border-radius: 10px;
   background-color: #CDAF95;
 }
-</style>
-
-<style>
-*{
-font-family: 'Arial';
-}
 
 .container { 
   margin-top: 10px;
-
   overflow: auto;
   overflow-x:hidden;
   height: 555px;
   width: auto;
 }
-
-
 </style>

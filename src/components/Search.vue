@@ -1,8 +1,8 @@
 <template>
-<div class='main'>
-    <input id="inp" v-model="inputValue" placeholder="Enter the task" />
-    <button class="mainButt" @click="addTask">Add</button>
-</div>
+    <div class='main'>
+        <input id="inp" v-model="inputValue" placeholder="Enter the task" />
+        <button class="mainButt" @click="addTask">Add</button>
+    </div>
 </template>
 
 <script>
@@ -57,11 +57,11 @@ input:focus {
     border-radius: 20px;
     padding: 10px;
     border: 0,5px solid black;
-box-shadow:6px 6px 12px rgba(255,255,255,0.36);
+    box-shadow:6px 6px 12px rgba(255,255,255,0.36);
 }
 
 .mainButt:active {
-    border: 1px solid rgba(128,128,128, 0.4);
+    border: 1px solid rgba(0,0,0,0.5);
     box-sizing: border-box;
 }
 
