@@ -43,7 +43,6 @@ export default {
         saveList(){
             let todoList = JSON.stringify(this.todos);
             localStorage.setItem("todoList", todoList);
-            console.log(JSON.parse(localStorage.getItem("todoList")));
         },
         addTask(inputValue){
             if (inputValue != '') {
