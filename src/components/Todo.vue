@@ -36,6 +36,12 @@ export default {
 .main {
   background-color:#FFFAFA;
   width: 500px;
+  padding: 0;
+  margin: 0;
+  margin-top:15px;
+  padding-inline-start: 0;
+  border-radius: 7px;
+  transition: 0.2s ease;
 }
 
 p {
@@ -73,13 +79,7 @@ p {
     border: 2px solid 	#A52A2A;
     color: 	#A52A2A;
   }
-  .main {
-    margin-top:15px;
-    margin-right: 35px;
-    padding-inline-start: 0;
-    border-radius: 7px;
-    transition: 0.2s ease;
-  }
+
 
   .main:hover{
     box-shadow:4px 4px 10px rgba(255,255,255,0.56);
@@ -107,7 +107,6 @@ li {
    flex-direction: row;
    align-items: center;
    margin: 15px;
-  margin-left: 5px;
 }
 .task_text{
   width: 400px;

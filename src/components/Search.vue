@@ -1,10 +1,9 @@
 <template>
 <div class='main'>
     <input id="inp" v-model="inputValue" placeholder="Enter the task" />
-    <button class="mainButt" @click="$emit('addTask', inputValue)">Add</button>
+    <button class="mainButt" @click="addTask">Add</button>
 </div>
 </template>
-
 
 <script>
 export default {
@@ -15,6 +14,13 @@ export default {
                 inputValue: '',
             }
     },
+
+    methods: {
+        addTask() {
+            this.$emit('addTask', this.inputValue)
+            this.inputValue = ''
+        }
+    }
 }
 
 

@@ -1,12 +1,14 @@
 <template>
   <div id="app">
   <div class="all">
-  <Search @addTask="addTask" :todos="todos" />
+    <Search @addTask="addTask" :todos="todos" />
   <div class="container">
-   <List @changeStatus="changeStatus" @deleteTask="deleteTask" :todos="todos" />
+  <div class="wrapper">
+      <List @changeStatus="changeStatus" @deleteTask="deleteTask" :todos="todos" />
+  </div>
    </div>
    <div class="butts">
-   <Buttons @saveList="saveList" @clearList="clearList" />
+    <Buttons @saveList="saveList" @clearList="clearList" />
    </div>
    </div>
   </div>
@@ -87,7 +89,6 @@ if ( localStorage.getItem("todoList") != null ) {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 60px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,6 +96,13 @@ if ( localStorage.getItem("todoList") != null ) {
 
 .title {
   color: yellow
+}
+
+.wrapper {
+  background-color: #ba9372;
+  padding: 5px 0;
+  height: auto;
+  min-height: 540px;
 }
 
 li {
@@ -108,6 +116,7 @@ li {
   padding-top: 20px;
   width: 579px;
   border: 1px solid black;
+  border-radius: 10px;
   background-color: #CDAF95;
 }
 </style>
@@ -119,9 +128,12 @@ font-family: 'Arial';
 
 .container { 
   margin-top: 10px;
-  overflow: scroll;
+
+  overflow: auto;
+  overflow-x:hidden;
   height: 555px;
   width: auto;
 }
+
 
 </style>
